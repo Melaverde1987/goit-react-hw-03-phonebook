@@ -16,5 +16,6 @@ export const ListItem = styled.li`
 
   p {
     min-width: 300px;
+    margin-bottom: 0;
   }
 `;

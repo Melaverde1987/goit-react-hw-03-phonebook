@@ -9,81 +9,81 @@ export const GlobalStyle = createGlobalStyle`
     h4,
     h5,
     h6 {
-    margin-top: 0;
-    margin-bottom: 0.5em;
-    font-weight: 600;
+        margin-top: 0;
+        margin-bottom: 0.5em;
+        font-weight: 600;
     }
 
     p {
-    margin-top: 0;
-    margin-bottom: 0.5em;
+        margin-top: 0;
+        margin-bottom: 0.5em;
     }
 
     ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+        margin: 0;
+        padding: 0;
+        list-style: none;
     }
 
     a {
-    color: var(--colorTextDark);
-    text-decoration: none;
-    transition: color var(--cubic-transition);
+        color: var(--colorTextDark);
+        text-decoration: none;
+        transition: color var(--cubic-transition);
     }
 
     a:hover,
     a:focus {
-    color: var(--colorPrimary);
+        color: var(--colorPrimary);
     }
 
     button {
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    padding: 0;
-    font-size: 16px;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        font-size: 16px;
     }
 
     img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
     hr {
-    border-top: 1px solid var(--colorBorder);
+        border-top: 1px solid var(--colorBorder);
     }
 
     th,
     td {
-    padding: 10px 20px;
-    text-align: left;
+        padding: 10px 20px;
+        text-align: left;
     }
 
     tr:nth-child(even) {
-    background-color: var(--colorSecondary);
+        background-color: var(--colorSecondary);
     }
 
     th {
-    background-color: var(--colorPrimary);
-    color: var(--white);
-    text-transform: uppercase;
+        background-color: var(--colorPrimary);
+        color: var(--white);
+        text-transform: uppercase;
     }
 
     input:focus,
     textarea:focus {
-    outline: 1px solid var(--colorPrimary);
+        outline: 1px solid var(--colorPrimary);
     }
 
     body {
-    font-family: var(--font-primary);
-    font-size: 16px;
-    line-height: 1.2;
-    font-weight: 400;
-    color: var(--black);
-    background-color: var(--colorBody);
-    margin: 0;
+        font-family: var(--font-primary);
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 400;
+        color: var(--black);
+        background-color: var(--colorBody);
+        margin: 0;
     }
 
     #root {
@@ -124,12 +124,31 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .btn.btn-outline:hover {
-    box-shadow: rgba(0, 0, 0, 0.48) 0 4px 12px;
+        box-shadow: rgba(0, 0, 0, 0.48) 0 4px 12px;
     }
 
     .btn.btn-outline:focus {
-    border: 1px solid var(--colorPrimaryDark);
-    color: var(--colorPrimaryDark);
+        border: 1px solid var(--colorPrimaryDark);
+        color: var(--colorPrimaryDark);
+    }
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    label {
+        margin-bottom: 5px;
+        color: var(--colorPrimary);
+        font-weight: 600;
+    }
+
+    input {
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid var(--black);
     }
 
     :root {

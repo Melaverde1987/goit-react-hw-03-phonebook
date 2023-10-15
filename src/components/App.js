@@ -56,6 +56,21 @@ export class App extends Component {
     );
   };
 
+  componentDidMount() {
+    const savedFilters = localStorage.getItem('contact-item');
+    if (savedFilters !== null) {
+      this.setState({
+        contacts: JSON.parse(savedFilters),
+      });
+    }
+  }
+
+  componentDidUpdate(prevState) {
+    if (prevState.filters !== this.state.contacts) {
+      localStorage.setItem('contact-item', JSON.stringify(this.state.contacts));
+    }
+  }
+
   render() {
     const { filter } = this.state;
     const visibleContacts = this.getVisibleContacts();
@@ -67,7 +82,12 @@ export class App extends Component {
 
         <h2>Contacts</h2>
         <Filter inputValue={filter} handleChange={this.onFilter} />
-        <ContactList contacts={visibleContacts} onDelete={this.deleteContact} />
+        {this.state.contacts.length > 0 && (
+          <ContactList
+            contacts={visibleContacts}
+            onDelete={this.deleteContact}
+          />
+        )}
       </div>
     );
   }
